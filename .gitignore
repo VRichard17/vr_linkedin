@@ -58,3 +58,6 @@ private/
 dist/
 build/
 out/
+
+# Separate repositories
+mem0-setup/
