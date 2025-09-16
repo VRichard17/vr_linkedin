@@ -1,0 +1,3 @@
+[submodule "mem0-setup"]
+	path = mem0-setup
+	url = https://github.com/o2alexanderfedin/mem0-mcp-server.git
