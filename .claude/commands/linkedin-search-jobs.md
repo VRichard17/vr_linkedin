@@ -23,24 +23,16 @@ Each agent in the workflow will:
 ## Three-Step Workflow
 
 **Step 1: LinkedIn Authentication**
-Use the Task tool to invoke the `linkedin-login` agent:
-- Smart authentication check (skip if already logged in)
-- Navigate to LinkedIn and authenticate if needed
-- Verify session and document status
+Use the Task tool to invoke the `linkedin-login` agent.
+**Goal**: Ensure authenticated LinkedIn session.
 
 **Step 2: Resume Analysis**
-Use the Task tool to invoke the `resume-analyzer` agent:
-- Generate SHA256 hash for intelligent caching
-- Extract LinkedIn job matching data (skills, roles, experience)
-- Output structured JSON for search optimization
+Use the Task tool to invoke the `resume-analyzer` agent.
+**Goal**: Extract job matching data from resume with intelligent caching.
 
 **Step 3: Intelligent Job Search**
-Use the Task tool to invoke the `linkedin-job-search` agent:
-- **Semantic Analysis**: Parse resume data in any format (JSON, free text, mixed)
-- Navigate to LinkedIn Jobs page
-- Apply filters based on extracted job search criteria
-- Execute multiple search variations with intelligent mapping
-- Document results and recommendations
+Use the Task tool to invoke the `linkedin-job-search` agent.
+**Goal**: Execute LinkedIn job searches based on resume analysis results.
 
 ## Arguments
 - `$1` - Resume file path (required)

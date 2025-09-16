@@ -19,21 +19,9 @@ The resume-analyzer agent will:
 - Store successful extraction patterns for reuse
 - Build a knowledge base of resume format variations
 
-Use the Task tool to invoke the `resume-analyzer` agent which will:
+Use the Task tool to invoke the `resume-analyzer` agent to extract structured data from the resume for LinkedIn job matching.
 
-1. **Skills Extraction**: Extract all technical skills, tools, certifications
-2. **Role Analysis**: Extract job titles, experience levels, career progression
-3. **Industry Mapping**: Identify industries, domains, company types
-4. **Experience Quantification**: Calculate years, leadership scope, project scale
-5. **Geographic Data**: Extract location preferences and remote work experience
-6. **LinkedIn Optimization**: Generate keywords and search filters
-
-The agent provides:
-- Structured JSON data for job matching algorithms
-- LinkedIn keyword lists for search optimization
-- Job search criteria and filters
-- Target role recommendations
-- Skill gap analysis for career development
+**Goal**: Extract comprehensive job matching data from the resume including skills, experience, preferences, and generate LinkedIn-optimized search criteria.
 
 **Input**: Resume file path (PDF, DOC, DOCX supported)
 **Output**: Structured JSON data for LinkedIn job search automation

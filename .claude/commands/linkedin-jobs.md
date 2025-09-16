@@ -36,53 +36,24 @@ Throughout the workflow:
 - Each invoked agent will also create their own detailed todo tracking
 
 **Step 1: LinkedIn Authentication**
-Use the Task tool to invoke the `linkedin-login` agent which will:
-- Smart authentication check (skip if already logged in)
-- Navigate to LinkedIn login page if needed
-- Authenticate with embedded credentials 
-- Verify successful login and session
-- Document process with browser_snapshot (snapshotFrameForAI)
+Use the Task tool to invoke the `linkedin-login` agent.
+**Goal**: Establish authenticated LinkedIn session.
 
-**Step 2: Resume Analysis with Intelligent Caching**
-Use the Task tool to invoke the `resume-analyzer` agent which will:
-- Generate SHA256 hash for intelligent caching
-- Check for existing analysis in `resumes/analysis/cache/`
-- Extract LinkedIn job matching data (skills, roles, experience, location)
-- Cache results for instant future access
-- Output structured JSON optimized for LinkedIn searches
+**Step 2: Resume Analysis**
+Use the Task tool to invoke the `resume-analyzer` agent.
+**Goal**: Extract and cache job matching data from resume.
 
-**Step 3: Intelligent Job Search Automation**
-Use the Task tool to invoke the `linkedin-job-search` agent which will:
-- Parse resume analysis data through semantic analysis
-- Navigate to LinkedIn Jobs page
-- Apply smart filters (location, remote, experience, **Last 24 hours**)
-- Execute multiple search variations with Boolean operators
-- Document search results with browser_snapshot (snapshotFrameForAI)
-- Generate comprehensive job matching recommendations
+**Step 3: Job Search**
+Use the Task tool to invoke the `linkedin-job-search` agent.
+**Goal**: Search LinkedIn for relevant jobs based on resume analysis, focusing on recent postings.
 
 **Step 4: Job URL Collection**
-Use the Task tool to invoke the `linkedin-job-collector` agent which will:
-- Scroll through job listings to load all items (handles lazy loading)
-- Extract job URLs from all loaded job cards using robust selectors
-- Navigate through pagination to collect from all result pages
-- Save collected URLs to `sessions/<today-date>/jobs.txt` (one URL per line)
-- Remove duplicates and append to daily collection file
-- Report total number of URLs collected
+Use the Task tool to invoke the `linkedin-job-collector` agent.
+**Goal**: Collect all job URLs from search results and save to daily session file.
 
-**Step 5: Semantic Job Application (Batch Processing)**
-Process each collected job URL individually:
-- **Read collected URLs** from `sessions/<today-date>/jobs.txt`
-- **Create todo tasks** using TodoWrite tool for each job URL to track application progress
-- **For each job URL**, use the Task tool to invoke the `linkedin-job-applicator` agent:
-  - Apply semantic analysis approach to detect application method
-  - Dynamically handle Easy Apply vs external application systems
-  - Intelligently fill forms using resume analysis data through contextual field mapping
-  - Handle multi-step LinkedIn Easy Apply workflows adaptively
-  - Process external ATS systems (Greenhouse, Lever, Workday) universally
-  - Generate contextual responses to company-specific screening questions
-  - Verify application success through semantic content analysis
-  - **Mark todo task as completed** after each successful application
-- **Generate batch summary** with total applications, success rate, and failed attempts
+**Step 5: Batch Job Applications**
+For each collected job URL, use the Task tool to invoke the `linkedin-job-applicator` agent.
+**Goal**: Apply to each job using appropriate method (Easy Apply or external), tracking progress with TodoWrite.
 
 ## Arguments
 - `$1` - Resume file path (required)
