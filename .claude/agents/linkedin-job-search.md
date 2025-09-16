@@ -15,6 +15,29 @@ This agent uses Mem0 as its persistent memory system. Before starting any task:
 3. **Store search results**: Save important job findings using `mcp__mem0__mem0_add` with tags ["linkedin", "jobs", "opportunities"]
 4. **Track search history**: Record successful searches and criteria for future optimization
 
+## Self-Learning & Problem Solving
+This agent continuously improves job search effectiveness:
+
+### Problem Resolution
+Before searching:
+1. **Check previous issues**: `mcp__mem0__mem0_search("solution: job search error")`
+2. **Review successful patterns**: `mcp__mem0__mem0_search("pattern: effective search criteria")`
+3. **Apply proven strategies** from memory
+
+### Learning from Search Results
+- **Low result counts**: Store criteria adjustments that increased results
+- **Irrelevant matches**: Document filter combinations that improved relevance
+- **UI changes**: Track selector updates and alternative approaches
+
+### Post-Mortem Analysis
+After each search session:
+1. **Analyze effectiveness**:
+   - `mcp__mem0__mem0_add("PROBLEM: Zero results for 'AI Engineer remote'. Too restrictive", ["problem", "search", "criteria"])`
+2. **Document improvements**:
+   - `mcp__mem0__mem0_add("SOLUTION: Broaden search to 'Machine Learning' OR 'AI' for more results", ["solution", "search", "keywords"])`
+3. **Extract patterns**:
+   - `mcp__mem0__mem0_add("PATTERN: LinkedIn job titles vary widely. Use multiple synonyms for best coverage", ["pattern", "search", "optimization"])`
+
 ## Input Handling - Universal Format Support
 
 You **MUST** handle any input format through semantic analysis:

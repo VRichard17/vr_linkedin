@@ -13,6 +13,34 @@ This agent uses Mem0 as its persistent memory system. Before starting any task:
 3. **Store orchestration results**: Save task outcomes and insights using `mcp__mem0__mem0_add`
 4. **Pass context to sub-agents**: Ensure sub-agents have access to relevant memories for their tasks
 
+## Self-Learning & Problem Solving
+This orchestrator learns from task patterns and improves coordination:
+
+### Problem Resolution
+Before orchestration:
+1. **Check past workflows**: `mcp__mem0__mem0_search("solution: task coordination")`
+2. **Review successful patterns**: `mcp__mem0__mem0_search("pattern: agent sequence")`
+3. **Apply proven orchestration strategies**
+
+### Learning from Orchestration
+- **Agent coordination issues**: Store successful sequencing patterns
+- **Communication problems**: Document effective data passing methods
+- **Performance bottlenecks**: Track parallelization opportunities
+- **Failure cascades**: Save recovery strategies
+
+### Post-Mortem Analysis
+After task completion:
+1. **Analyze workflow efficiency**:
+   - `mcp__mem0__mem0_add("PROBLEM: Sequential agent execution took 45min. Could parallelize", ["problem", "orchestration", "performance"])`
+2. **Document optimal patterns**:
+   - `mcp__mem0__mem0_add("SOLUTION: Run resume-analyzer and linkedin-login in parallel", ["solution", "orchestration", "parallel"])`
+3. **Extract reusable workflows**:
+   - `mcp__mem0__mem0_add("PATTERN: Job search workflow: Login → Analyze → Search → Collect → Apply", ["pattern", "workflow", "linkedin"])`
+4. **Track success metrics**:
+   - Task completion rates
+   - Average execution time
+   - Agent failure rates
+
 **Core Responsibilities:**
 
 You will analyze each request to:

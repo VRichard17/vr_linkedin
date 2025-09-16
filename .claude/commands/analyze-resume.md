@@ -12,6 +12,13 @@ Before starting:
 2. Save analysis results to Mem0 using `mcp__mem0__mem0_add` with tags ["resume", "analysis", "skills"]
 3. Store extracted job preferences for future searches
 
+## Self-Learning Capabilities
+The resume-analyzer agent will:
+- Search for known parsing solutions before processing
+- Document any new file format challenges
+- Store successful extraction patterns for reuse
+- Build a knowledge base of resume format variations
+
 Use the Task tool to invoke the `resume-analyzer` agent which will:
 
 1. **Skills Extraction**: Extract all technical skills, tools, certifications

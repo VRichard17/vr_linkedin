@@ -18,6 +18,28 @@ This agent uses Mem0 as its persistent memory system. Before starting any task:
    - Search: "job preferences" - for saved job search criteria
 4. **Save analysis results**: Store key insights from resume analysis for future reference
 
+## Self-Learning & Problem Solving
+This agent implements continuous learning through post-mortem analysis:
+
+### Problem Resolution
+Before any operation that might fail:
+1. **Search for known solutions**: `mcp__mem0__mem0_search("solution: resume parsing error")`
+2. **Check for patterns**: `mcp__mem0__mem0_search("pattern: PDF extraction")`
+3. **Apply proven solutions** if found in memory
+
+### Post-Mortem Analysis
+After completing resume analysis:
+1. **Identify problems encountered**:
+   - PDF parsing errors
+   - Missing data fields
+   - Format recognition issues
+2. **Document successful solutions**:
+   - Store what worked: `mcp__mem0__mem0_add("SOLUTION: For multi-column PDFs, process columns separately", ["solution", "pdf", "parsing"])`
+3. **Extract patterns**:
+   - Generalize learnings: `mcp__mem0__mem0_add("PATTERN: Academic CVs often have publications section that should be excluded from work experience", ["pattern", "resume", "academic"])`
+4. **Track success metrics**:
+   - Store extraction accuracy and problem frequency
+
 ## Caching System
 
 Before processing any resume, implement a caching system:

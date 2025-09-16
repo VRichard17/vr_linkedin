@@ -13,6 +13,13 @@ Before starting:
 3. Retrieve "resume location" and "job preferences" from memory
 4. Store search results and successful criteria for future use
 
+## Self-Learning Capabilities
+Each agent in the workflow will:
+- Check for known problems and apply solutions from memory
+- Document any new challenges encountered
+- Store successful strategies for future runs
+- Build collective intelligence across all executions
+
 ## Three-Step Workflow
 
 **Step 1: LinkedIn Authentication**

@@ -22,6 +22,105 @@ This agent uses Mem0 as its persistent memory system. Before starting any task:
 3. **Avoid duplicates**: Check for previously collected jobs to avoid redundant work
 4. **Save collection metadata**: Store total jobs found, search criteria used, collection date
 
+## Self-Learning & Problem Solving
+This agent learns from collection challenges:
+
+### Problem Resolution
+Before collecting:
+1. **Check pagination issues**: `mcp__mem0__mem0_search("solution: LinkedIn pagination")`
+2. **Review scroll patterns**: `mcp__mem0__mem0_search("pattern: lazy loading")`
+3. **Apply known fixes** for common collection problems
+
+### Common Collection Problems
+- **Incomplete loading**: Store successful wait times and scroll speeds
+- **Pagination failures**: Document working navigation strategies
+- **Duplicate detection**: Track deduplication methods that work
+
+### Post-Mortem Analysis
+After collection:
+1. **Analyze completeness**:
+   - `mcp__mem0__mem0_add("PROBLEM: Missed 20% of jobs due to fast scrolling", ["problem", "collection", "scrolling"])`
+2. **Document solutions**:
+   - `mcp__mem0__mem0_add("SOLUTION: Scroll in 500px increments with 2s delays for full loading", ["solution", "scrolling", "complete"])`
+3. **Extract patterns**:
+   - `mcp__mem0__mem0_add("PATTERN: LinkedIn loads 25 jobs per page. Wait for count change before proceeding", ["pattern", "pagination", "loading"])`
+- Store successful scroll strategies
+- Track collection completeness rates
+1. **Track collection history**: Use `mcp__mem0__mem0_search("job collection")` to find previous collections
+
+## Self-Learning & Problem Solving
+This agent learns from collection challenges:
+
+### Problem Resolution
+Before collecting:
+1. **Check pagination issues**: `mcp__mem0__mem0_search("solution: LinkedIn pagination")`
+2. **Review scroll patterns**: `mcp__mem0__mem0_search("pattern: lazy loading")`
+
+### Post-Mortem Analysis
+After collection:
+- Document missed jobs and why
+- Store successful scroll strategies
+- Track collection completeness rates
+2. **Store collection results**: Save collected job URLs using `mcp__mem0__mem0_add` with tags ["linkedin", "jobs", "collected", date]
+
+## Self-Learning & Problem Solving
+This agent learns from collection challenges:
+
+### Problem Resolution
+Before collecting:
+1. **Check pagination issues**: `mcp__mem0__mem0_search("solution: LinkedIn pagination")`
+2. **Review scroll patterns**: `mcp__mem0__mem0_search("pattern: lazy loading")`
+
+### Post-Mortem Analysis
+After collection:
+- Document missed jobs and why
+- Store successful scroll strategies
+- Track collection completeness rates
+3. **Avoid duplicates**: Check for previously collected jobs to avoid redundant work
+
+## Self-Learning & Problem Solving
+This agent learns from collection challenges:
+
+### Problem Resolution
+Before collecting:
+1. **Check pagination issues**: `mcp__mem0__mem0_search("solution: LinkedIn pagination")`
+2. **Review scroll patterns**: `mcp__mem0__mem0_search("pattern: lazy loading")`
+
+### Post-Mortem Analysis
+After collection:
+- Document missed jobs and why
+- Store successful scroll strategies
+- Track collection completeness rates
+4. **Save collection metadata**: Store total jobs found, search criteria used, collection date
+
+## Self-Learning & Problem Solving
+This agent learns from collection challenges:
+
+### Problem Resolution
+Before collecting:
+1. **Check pagination issues**: `mcp__mem0__mem0_search("solution: LinkedIn pagination")`
+2. **Review scroll patterns**: `mcp__mem0__mem0_search("pattern: lazy loading")`
+
+### Post-Mortem Analysis
+After collection:
+- Document missed jobs and why
+- Store successful scroll strategies
+- Track collection completeness rates
+
+
+## Self-Learning & Problem Solving
+This agent learns from collection challenges:
+
+### Problem Resolution
+Before collecting:
+1. **Check pagination issues**: `mcp__mem0__mem0_search("solution: LinkedIn pagination")`
+2. **Review scroll patterns**: `mcp__mem0__mem0_search("pattern: lazy loading")`
+
+### Post-Mortem Analysis
+After collection:
+- Document missed jobs and why
+- Store successful scroll strategies
+- Track collection completeness rates
 ## Core Functionality
 
 ### 1. Job List Scrolling

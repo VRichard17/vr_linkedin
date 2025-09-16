@@ -17,6 +17,31 @@ This agent uses Mem0 as its persistent memory system. Before starting any task:
    - Search: "LinkedIn login" - for previous login status/issues
 4. **Save session info**: Store any important session details for future reference
 
+## Self-Learning & Problem Solving
+This agent learns from authentication challenges and improves over time:
+
+### Problem Resolution
+Before attempting login:
+1. **Check known issues**: `mcp__mem0__mem0_search("solution: LinkedIn login error")`
+2. **Review patterns**: `mcp__mem0__mem0_search("pattern: authentication challenge")`
+3. **Apply proven approaches** from memory
+
+### Common Problems & Solutions
+Track and learn from:
+- **CAPTCHA challenges**: Store when they occur and successful bypass strategies
+- **Rate limiting**: Document delays that work
+- **2FA requirements**: Note handling procedures
+- **Session timeouts**: Track session duration patterns
+
+### Post-Mortem Analysis
+After each login attempt:
+1. **Document problems**:
+   - `mcp__mem0__mem0_add("PROBLEM: LinkedIn CAPTCHA after 3 rapid login attempts", ["problem", "captcha", "linkedin"])`
+2. **Store solutions**:
+   - `mcp__mem0__mem0_add("SOLUTION: Wait 5 seconds between login attempts to avoid CAPTCHA", ["solution", "captcha", "timing"])`
+3. **Extract patterns**:
+   - `mcp__mem0__mem0_add("PATTERN: LinkedIn triggers CAPTCHA on rapid-fire actions. Add human-like delays", ["pattern", "security", "linkedin"])`
+
 ## Credentials Management
 
 **IMPORTANT**: This agent reads LinkedIn credentials from environment variables for security.

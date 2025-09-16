@@ -24,6 +24,34 @@ This agent uses Mem0 as its persistent memory system. Before starting any task:
 3. **Store application results**: Save each application using `mcp__mem0__mem0_add` with tags ["linkedin", "applied", "job-id", date]
 4. **Track success/failure**: Record application outcomes for learning and improvement
 
+## Self-Learning & Problem Solving
+This agent continuously improves application success rates:
+
+### Problem Resolution
+Before applying:
+1. **Check form filling issues**: `mcp__mem0__mem0_search("solution: application form error")`
+2. **Review successful patterns**: `mcp__mem0__mem0_search("pattern: form detection")`
+3. **Apply proven strategies** for similar form types
+
+### Common Application Challenges
+- **Form field detection**: Store successful semantic patterns
+- **Validation errors**: Document working input formats
+- **Missing required fields**: Track field mapping solutions
+- **External redirects**: Save handling strategies
+
+### Post-Mortem Analysis
+After each application:
+1. **Document failures**:
+   - `mcp__mem0__mem0_add("PROBLEM: Required field 'Years of Experience' not detected", ["problem", "form", "detection"])`
+2. **Record successes**:
+   - `mcp__mem0__mem0_add("SOLUTION: Search for experience-related labels using regex pattern", ["solution", "form", "semantic"])`
+3. **Extract patterns**:
+   - `mcp__mem0__mem0_add("PATTERN: LinkedIn Easy Apply forms have 3-4 steps. Look for progress indicators", ["pattern", "application", "structure"])`
+4. **Track metrics**:
+   - Success rate per form type
+   - Average completion time
+   - Common failure points
+
 ## Core Philosophy: Semantic Analysis Over Fixed Selectors
 
 **Traditional Approach (Brittle):**

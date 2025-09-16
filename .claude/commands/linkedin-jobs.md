@@ -16,6 +16,13 @@ Before starting:
 3. Get "resume location" and "personal information" from memory
 4. Store application results and track success rates
 
+## Self-Learning & Continuous Improvement
+Throughout the workflow:
+- Each agent searches for known problems and applies learned solutions
+- New challenges are documented with their resolutions
+- Successful patterns are extracted and stored for future use
+- The system becomes more effective with each execution
+
 ## Five-Step Automated Workflow
 
 **STEP 0: Initialize Workflow Todo Tracking**
