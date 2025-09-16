@@ -9,6 +9,13 @@ Complete LinkedIn job search automation workflow combining authentication, resum
 ## MANDATORY: TodoWrite Tool Usage
 **CRITICAL REQUIREMENT**: This slash command MUST use the TodoWrite tool throughout execution to track all major workflow steps and provide visibility to the user. Create todos for each of the 5 major steps at the beginning and update them as each step progresses. All invoked agents are also required to use TodoWrite for their internal step tracking. This comprehensive todo tracking is not optional - it ensures complete transparency and progress monitoring throughout the entire automation pipeline.
 
+## Memory Bank Integration
+Before starting:
+1. Use `mcp__mem0__mem0_list()` to retrieve all user context and preferences
+2. Search for "applied jobs" to avoid duplicate applications
+3. Get "resume location" and "personal information" from memory
+4. Store application results and track success rates
+
 ## Five-Step Automated Workflow
 
 **STEP 0: Initialize Workflow Todo Tracking**

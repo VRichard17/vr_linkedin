@@ -6,6 +6,12 @@ allowed-tools: ["*"]
 
 Extract structured data from resume for LinkedIn job matching automation.
 
+## Memory Bank Integration
+Before starting:
+1. Use `mcp__mem0__mem0_search("resume location")` to check for saved resume paths
+2. Save analysis results to Mem0 using `mcp__mem0__mem0_add` with tags ["resume", "analysis", "skills"]
+3. Store extracted job preferences for future searches
+
 Use the Task tool to invoke the `resume-analyzer` agent which will:
 
 1. **Skills Extraction**: Extract all technical skills, tools, certifications

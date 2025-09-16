@@ -6,6 +6,13 @@ allowed-tools: ["*"]
 
 Execute complete LinkedIn job search automation workflow combining authentication, resume analysis, and intelligent job search.
 
+## Memory Bank Integration
+Before starting:
+1. Use `mcp__mem0__mem0_list()` to get all context about user preferences and history
+2. Search for "LinkedIn credentials" to verify authentication setup
+3. Retrieve "resume location" and "job preferences" from memory
+4. Store search results and successful criteria for future use
+
 ## Three-Step Workflow
 
 **Step 1: LinkedIn Authentication**
